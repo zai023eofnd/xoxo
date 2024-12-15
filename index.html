@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secret Vault</title>                                                  
+  <style>
+    body {
+      font-family: Arial, Georgia ;
+      text-align: center;
+      background: linear-gradient(to right, #1484e5, #31b6f8);
+      color: #0609ab;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin-top: 100px;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #0e0101;
+    }
+    p {
+      font-size: 1.2em;
+      color: #040d54;
+    }
+    .vault {
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(19, 160, 182, 0.8);
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #0d0401ed;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #2dd2d7;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #18c5c5;
+    }
+    .hidden {
+      display: none;
+    }
+    .surprise {
+      margin: 20px;
+      padding: 15px;
+      background: rgba(234, 237, 239, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    a {
+      text-decoration: none;
+      color: #011267;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>WELCOME</h1>
+    <p>nak mat katwana!</p>
+
+    <div id="poemVault" class="vault">
+      <p><strong>Question:</strong> What is my favorite flower? (Hint: starts with "t")</p>
+      <input type="text" id="poemPassword" placeholder="Enter answer">
+      <button onclick="checkPoemPassword()">Unlock Poem</button>
+    </div>
+
+    <div id="poem" class="hidden surprise">
+      <h3>28 December 2024</h3>
+      <p>" You deserve better," they say.<br> 
+        But what if I don’t want better?<br>
+        Better isn’t you, and that’s all that matters.<br><br>
+        I wish you could look inside my mind,<br>
+        See the chaos, the longing, the truth.<br>
+        Understand that my version of better<br>
+        Isn’t wrapped in perfection or ideals.<br>
+        It’s wrapped in you—in your flaws,<br>
+        In the way you make me laugh, the way you see the world.<br><br>
+        For me, there is no better.<br>
+        Better doesn’t hold the warmth of your messeges,<br>
+        or in the way you comfort me<br><br>
+        But no matter how hard I try,<br>
+        How strong my words or actions,<br>
+        I can’t seem to make you believe.<br>
+        You’ve built this wall of doubt around yourself,<br>
+        A mirror reflecting your imperfections.<br><br>
+        I just wish I could convince you,<br>
+        That there’s nothing better than you,<br>
+        Because for me,<br>
+        You’ve always been perfection.<br>
+      </p> 
+    </div>
+
+    <div id="videovault" class="vault hidden">
+      <p><strong>Question:</strong> Which is my favorite book? (Hint: the possibility of you is better than the reality of someone else)</p>
+      <input type="text" id="videovaultPassword" placeholder="Enter answer">
+      <button onclick="checkvideovaultPassword()">Unlock Video Vault</button>
+    </div>
+
+    
+      
+      <div id="playlist" class="hidden surprise"> 
+        <h3>Capcut Zindabad</h3>
+        
+        <!-- Video 1 -->
+        <video width="200" controls>
+          <source src="c:\Users\hp\Downloads\WhatsApp Video 2024-12-15 at 04.49.31_536cd319.mp4" type="video/mp4">
+          
+        </video>
+      
+        <!-- Video 2 -->
+        <video width="200" controls>
+          <source src="c:\Users\hp\Downloads\WhatsApp Video 2024-12-15 at 04.49.54_171c4c4c.mp4" type="video/mp4">
+        
+        </video>
+      
+        <!-- Video 3 -->
+        <video width="200" controls>
+          <source src="c:\Users\hp\Downloads\WhatsApp Video 2024-12-15 at 04.50.12_8cdfef3f.mp4" type="video/mp4">
+          
+        </video>
+      
+      </div>
+      
+
+    
+
+    <div id="playlistVault" class="vault hidden">
+        <p><strong>Question:</strong> What is my favorite song? (Hint: The Neighbourhood)</p>
+        <input type="text" id="playlistPassword" placeholder="Enter answer">
+        <button onclick="checkPlaylistPassword()">Unlock Playlist</button>
+      </div>
+      
+      <div id="playlistLink" class="hidden surprise">
+        <h3>Damn, it took me 3 hours to make this playlist!</h3>
+        <!-- Embed Spotify playlist -->
+        <iframe src="https://open.spotify.com/embed/playlist/1Mu8w002dCbjgQ0DIOspCH?si=6a0027d85ed34b9a" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+
+      <div id="messageVault" class="vault hidden">
+        <p><strong>Question:</strong> my nick name for you? </p>
+        <input type="text" id="messagePassword" placeholder="Enter answer">
+        <button onclick="checkMessagePassword()">Unlock Message</button>
+      </div>
+      
+
+    <div id="message" class="hidden surprise">
+      <h3>*coughs*</h3>
+      <p>"Happy 16,🐜 mere bro ,🥳 well not happy cuz lol this year was shit af ik ik but still ,😎 7 months have passed yet it feels like yesterday , you're the brigtest star in my life and each day i thank god for giving me someone like you , i🫶you're literally the best person (just not when you leave me on delivered for days) 💀😤anyways stay blessed bro and aisy hi humesha rehna , 🥺and js don't leave me , i couldn't give you a surprise like i wanted to but this was the least i can do ik it's not enough but i'm helpless , maybe one day i'll give u a big gift , oye also yeh thoda istamal kar liya kro 🧠<br>
+        xoxo🫂<br>
+        zai🫀🎀"</p>
+    </div>
+
+    <div id="voiceNoteVault" class="vault hidden">
+      <p><strong>Question:</strong> What is the month and date we met? (Hint: Same as my birthday)</p>
+      <input type="text" id="voiceNotePassword" placeholder="Enter answer">
+      <button onclick="checkVoiceNotePassword()">ik ik chuss hy sorry </button>
+    </div>
+
+    <div id="voiceNote" class="hidden surprise">
+      <h3>Hehe >></h3>
+      <audio controls>
+        <source src="c:\Users\hp\OneDrive\Documents\Sound recordings\Recording (9).m4a" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <script>
+    function checkPoemPassword() {
+      const password = document.getElementById('poemPassword').value;
+      if (password.toLowerCase() === 'tulips') {
+        document.getElementById('poem').classList.remove('hidden');
+        document.getElementById('poemVault').classList.add('hidden');
+        document.getElementById('videovault').classList.remove('hidden');
+      } else {
+        alert('Wrong answer! Try again.');
+      }
+    }
+
+    function checkvideovaultPassword() {
+      const password = document.getElementById('videovaultPassword').value;
+      if (password.toLowerCase() === 'twisted hate') {
+        document.getElementById('videovault').classList.add('hidden');
+        document.getElementById('playlistVault').classList.remove('hidden');
+        document.getElementById('playlist').classList.remove('hidden');
+      } else {
+        alert('Wrong answer! Try again.');
+      }
+    }
+
+    function checkPlaylistPassword() {
+      const password = document.getElementById('playlistPassword').value;
+      if (password.toLowerCase() === 'sweater weather') {
+        document.getElementById('playlistLink').classList.remove('hidden');
+        document.getElementById('playlistVault').classList.add('hidden');
+        document.getElementById('messageVault').classList.remove('hidden');
+      } else {
+        alert('Wrong answer! Try again.');
+      }
+    }
+
+    function checkMessagePassword() {
+  const password = document.getElementById('messagePassword').value;
+  if (password.toLowerCase() === 'nigga') {
+    document.getElementById('message').classList.remove('hidden');
+    document.getElementById('messageVault').classList.add('hidden');
+    document.getElementById('voiceNoteVault').classList.remove('hidden');
+  } else {
+    alert('Wrong answer! Try again.');
+  }
+}
+
+      
+
+    function checkVoiceNotePassword() {
+      const password = document.getElementById('voiceNotePassword').value;
+      if (password.toLowerCase() === '17 may') {
+        document.getElementById('voiceNote').classList.remove('hidden');
+        document.getElementById('voiceNoteVault').classList.add('hidden');
+      } else {
+        alert('Wrong answer! Try again.');
+      }
+    }
+  </script>
+</body>
+</html>
